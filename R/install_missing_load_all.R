@@ -5,7 +5,7 @@ is_required <- function(pkg) {
   }
 
 install_each_if <- function(pkg) {
-  if (is_required(pkg)) install.packages(pkg)
+  if (is_required(pkg)) utils::install.packages(pkg)
   }
 
 install_missing <- function(pkg) {purrr::walk(pkg, install_each_if)}
@@ -20,8 +20,10 @@ load_all <- function(pkg) {purrr::walk(pkg, library, character.only = TRUE)}
 #' @export
 #'
 #' @examples
-#' pkg <- c("dplyr", "pacman")
-#' install_missing_load_all(pkg)
+#' \dontrun{
+#'   pkg <- c("dplyr", "pacman")
+#'   install_missing_load_all(pkg)
+#'   }
 install_missing_load_all <- function(pkg) {
   install_missing(pkg)
   load_all(pkg)

@@ -16,6 +16,8 @@ nothing but messages from install.packages() and library()
 Given package names, install missing ones and load all
 }
 \examples{
-pkg <- c("dplyr", "pacman")
-install_missing_load_all(pkg)
+\dontrun{
+  pkg <- c("dplyr", "pacman")
+  install_missing_load_all(pkg)
+  }
 }
