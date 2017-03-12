@@ -13,6 +13,7 @@ Installation
 ``` r
 # install.packages("devtools")
 install_github("maurolepore/handy")
+library(handy)
 ```
 
 Example
