@@ -13,6 +13,7 @@ Roxygen: list(markdown = TRUE)
 URL: https://github.com/maurolepore/handy
 BugReports: https://github.com/maurolepore/handy
 Suggests: testthat,
-    covr
+    covr,
+    purrr
 Imports: utils
 Remotes: hadley/purrr
