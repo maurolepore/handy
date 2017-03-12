@@ -23,6 +23,7 @@ Handy tools
 ```R
 # install.packages("devtools")
 install_github("maurolepore/handy")
+library(handy)
 ```
 
 ## Example

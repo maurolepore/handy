@@ -26,7 +26,7 @@ load_all <- function(pkg) {lapply(pkg, library, character.only = TRUE)}
 #'   }
 install_missing_load_all <- function(pkg) {
   install_missing(pkg)
-  load_all(pkg)
+  loaded <- load_all(pkg)
   }
 
 
