@@ -18,8 +18,6 @@ install_github("maurolepore/handy")
 Example
 -------
 
-This is a basic example which shows you how to solve a common problem:
-
 ``` r
 pkg <- c("dplyr", "pacman")
 install_missing_load_all(pkg)
