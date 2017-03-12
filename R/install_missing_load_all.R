@@ -20,8 +20,8 @@ load_all <- function(pkg) {purrr::walk(pkg, library, character.only = TRUE)}
 #' @export
 #'
 #' @examples
-pkg <- c("dplyr", "pacman")
-install_missing_load_all(pkg)
+#' pkg <- c("dplyr", "pacman")
+#' install_missing_load_all(pkg)
 install_missing_load_all <- function(pkg) {
   install_missing(pkg)
   load_all(pkg)

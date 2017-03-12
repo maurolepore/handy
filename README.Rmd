@@ -1,7 +1,5 @@
 ---
-output:
-  md_document:
-    variant: markdown_github
+output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -14,14 +12,36 @@ knitr::opts_chunk$set(
 )
 ```
 
+[![Travis-CI Build Status](https://travis-ci.org/maurolepore/handy.svg?branch=master)](https://travis-ci.org/maurolepore/handy)[![Coverage Status](https://img.shields.io/codecov/c/github/maurolepore/handy/master.svg)](https://codecov.io/github/maurolepore/handy?branch=master)
+
+
+
+
+* Turn on travis for your repo at https://travis-ci.org/maurolepore/handy
+
+
+
+
+
 # handy
 
-The goal of handy is to ...
+Handy tools
+
+## Installation
+
+```R
+# install.packages("devtools")
+install_github("maurolepore/handy")
+```
 
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
-## basic example code
+```R
+pkg <- c("dplyr", "pacman")
+install_missing_load_all(pkg)
 ```
+
+
+
