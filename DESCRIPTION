@@ -16,4 +16,3 @@ Suggests: testthat,
     covr,
     purrr
 Imports: utils
-Remotes: hadley/purrr

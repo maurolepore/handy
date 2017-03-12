@@ -8,9 +8,9 @@ install_each_if <- function(pkg) {
   if (is_required(pkg)) utils::install.packages(pkg)
   }
 
-install_missing <- function(pkg) {purrr::walk(pkg, install_each_if)}
+install_missing <- function(pkg) {lapply(pkg, install_each_if)}
 
-load_all <- function(pkg) {purrr::walk(pkg, library, character.only = TRUE)}
+load_all <- function(pkg) {lapply(pkg, library, character.only = TRUE)}
 
 #' Given package names, install missing ones and load all
 #'
