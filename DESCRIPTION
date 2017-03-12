@@ -14,5 +14,5 @@ URL: https://github.com/maurolepore/handy
 BugReports: https://github.com/maurolepore/handy
 Suggests: testthat,
     covr
-Imports: purrr,
-    utils
+Imports: utils
+Remotes: hadley/purrr
