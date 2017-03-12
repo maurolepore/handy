@@ -13,5 +13,5 @@ Roxygen: list(markdown = TRUE)
 URL: https://github.com/maurolepore/handy
 BugReports: https://github.com/maurolepore/handy
 Suggests: testthat,
-    purrr
-Imports: utils
+    purrr,
+    utils
