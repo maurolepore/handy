@@ -16,3 +16,16 @@ msg_open <- function() {
     [Code glossary](https://gist.github.com/maurolepore/f7489d127f4749d76150f373dbbc4843)
     ")
   }
+
+
+
+#' Print GUEST_TOKEN to pass to auto_token argument of devtools::install_Github
+#'
+#' @return
+#' @export
+#'
+#' @examples
+msg_guest_token <- function(){
+  message('GUEST_TOKEN <- "d60277dad4177c278455e885366a7170e22ae092"')
+  }
+
