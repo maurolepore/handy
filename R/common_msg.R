@@ -4,8 +4,8 @@
 #' @export
 #'
 #' @examples
-#' pring_zen
-print_zen <- function() {
+#' msg_open()
+msg_open <- function() {
   message("
     [Design zen](https://github.com/forestgeo/learn/issues/8)
 
