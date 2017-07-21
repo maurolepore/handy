@@ -14,15 +14,15 @@
 #' # Tag a line in a file, so you can come back to that line later easily.
 #' fig_key <- tag("Figure showhing key results.")
 #' # <cool code>
-#' To locate the tag again, search it in RStudio with the shortcut Ctrl+.
+#' # To locate the tag again, search it in RStudio with the shortcut Ctrl+.
 #'
-#' # Tags are handy, for example, to recover your last job.
-#' xxxnext <- tag("Dear future me, continue working here.")
-#' xxxnext()
+#' # You may tag the next item in your "to do" list.
+#' todo <- tag("Dear future me, continue working here.")
+#' todo()
 #'
 #' # Giving a message is optional.
-#' xxxnext <- tag()
-#' xxxnext()
+#' todo <- tag()
+#' todo()
 #'
 #' # You may track tags in you manuscript, to link text and code.
 tag <- function(msg = "") {

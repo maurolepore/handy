@@ -21,10 +21,11 @@ msg_open <- function() {
 
 #' Print GUEST_TOKEN to pass to auto_token argument of devtools::install_Github
 #'
-#' @return
+#' @return Message
 #' @export
 #'
 #' @examples
+#' msg_guest_token()
 msg_guest_token <- function(){
   message('GUEST_TOKEN <- "d60277dad4177c278455e885366a7170e22ae092"')
   }
