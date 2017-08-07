@@ -15,3 +15,4 @@ BugReports: https://github.com/maurolepore/handy
 Suggests: testthat,
     purrr,
     utils
+Imports: DependenciesGraphs
