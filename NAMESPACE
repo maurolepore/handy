@@ -2,8 +2,13 @@
 
 export(commas)
 export(explore_dependencies)
+export(get_my_rstudio_proj_list)
 export(install_missing_load_all)
 export(msg_guest_token)
 export(msg_open)
 export(prefix_file)
+export(start_lines_with)
 export(tag)
+export(to_xy_value)
+export(unlist_rstudio_proj)
+export(unwhich)

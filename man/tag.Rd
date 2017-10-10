@@ -2,34 +2,20 @@
 % Please edit documentation in R/tag.R
 \name{tag}
 \alias{tag}
-\title{Tag a line in a file with and optional message.}
+\title{Produce a tag label of letters and numbers.}
 \usage{
-tag(msg = "")
+tag(n = 2)
 }
 \arguments{
-\item{msg}{An optional message (default is an empty message).}
+\item{n}{Number of letters/numbers you want the tag to have.}
 }
 \value{
-A closure (see \href{https://goo.gl/mHvapg}{Closures} in \href{http://adv-r.had.co.nz/}{AdvancedR} by Hadley Whickham).
+A string.
 }
 \description{
-Tags help track information because they can be searched in RStudio with the
-shortcut \code{Ctrl+.} ("Go To File/Function...").
+Produce a tag label of letters and numbers.
 }
 \examples{
-
-# Tag a line in a file, so you can come back to that line later easily.
-fig_key <- tag("Figure showhing key results.")
-# <cool code>
-# To locate the tag again, search it in RStudio with the shortcut Ctrl+.
-
-# You may tag the next item in your "to do" list.
-todo <- tag("Dear future me, continue working here.")
-todo()
-
-# Giving a message is optional.
-todo <- tag()
-todo()
-
-# You may track tags in you manuscript, to link text and code.
+tag()
+tag(3)
 }

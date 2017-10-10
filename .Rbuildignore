@@ -4,5 +4,5 @@
 ^README-.*\.png$
 ^\.travis\.yml$
 ^codecov\.yml$
-^C:/Users/dora/Dropbox/git_repos/handy/docs$
 ^vignettes/rsconnect$
+^docs/$

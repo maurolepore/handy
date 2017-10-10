@@ -15,8 +15,10 @@ library(ctfs)
 #' library(ctfs)
 #' explore_dependencies("ctfs", "abundanceperquad")
 explore_dependencies <- function(pkg, .f) {
-  if (!isNamespaceLoaded(pkg)) {
-    stop(paste0("run library(", pkg, ") and retry."))
+  if (require("DependenciesGraphs")) {
+    if (!isNamespaceLoaded(pkg)) {
+      stop(paste0("run library(", pkg, ") and retry."))
+    }
   }
   in_package <- paste0("package:", pkg)
   dep <- DependenciesGraphs::funDependencies(in_package, .f)
