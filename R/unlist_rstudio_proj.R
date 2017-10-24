@@ -4,33 +4,38 @@
 #' @export
 #'
 #' @examples
-#' get_my_rstudio_proj_list()
-get_my_rstudio_proj_list <- function() {
+#' get_path_to_listed_rproj()
+get_path_to_listed_rproj <- function() {
   "C:/Users/dora/AppData/Local/RStudio-Desktop/monitored/lists/project_mru"
 }
 
 
-#' Remove projects from RStudio's project list.
+#' Remove specific projects from RStudio's list under File > Recent Projects.
 #'
-#' @param path_to_list Path to the file where the projects are listed. In my
-#'   computer, they are given by [get_my_rstudio_proj_list()].
-#' @param rm_proj
+#' This function is called for its side effect: to remove one or more RStudio's
+#' projects from the list of recent projects found in File > Recent Projects.
 #'
-#' @return Invisible projects to keep. This function is called for its side
-#'   effect: to overwite the list of RStudio projects to exclude the ones the
-#'   user choosed to exclude.
+#' @param rm_proj Pattern to match the project(s) to remove.
+#' @param path Path to the file where RStudio stores the list of Recent
+#'   Projects.
+#'
+#' @return Invisibly returns the to Keep. The side effect is a list of Recent
+#'   RStudio projects thas lacks the ones the user chosed to remove.
+#'
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' x <- unlist_rstudio_proj(get_my_rstudio_proj_list(), rm_proj = "todo|handy")
+#' # Remove "project1" and "project3".
+#' x <- unlist_rstudio_proj("project1|project3")
+#' # Show the projects to keep in File > Recent Projects
 #' x
 #' }
-unlist_rstudio_proj <- function(rm_proj, path_to_list = get_my_rstudio_proj_list()) {
-  projs <- readr::read_lines(path_to_list)
+unlist_rstudio_proj <- function(rm_proj, path = get_path_to_listed_rproj()) {
+  rproj <- readr::read_lines(path)
 
-  keep <- projs[!grepl(rm_proj, projs)]
-  readr::write_lines(keep, path_to_list)
+  keep <- rproj[!grepl(rm_proj, rproj)]
+  readr::write_lines(keep, path)
   invisible(keep)
 }
 
