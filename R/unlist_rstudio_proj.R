@@ -1,12 +1,19 @@
 #' Get the path to the file that stores RStudio's projects list.
 #'
+#' @param user One of c("LeporeM", "dora").
+#'
 #' @return A path.
 #' @export
 #'
 #' @examples
 #' get_path_to_listed_rproj()
-get_path_to_listed_rproj <- function() {
-  "C:/Users/dora/AppData/Local/RStudio-Desktop/monitored/lists/project_mru"
+get_path_to_listed_rproj <- function(user = c("LeporeM", "dora")) {
+  user <- user[1]
+  paste0(
+    "C:/Users/",
+    user, 
+    "/AppData/Local/RStudio-Desktop/monitored/lists/project_mru"
+  )
 }
 
 
@@ -31,7 +38,10 @@ get_path_to_listed_rproj <- function() {
 #' # Show the projects to keep in File > Recent Projects
 #' x
 #' }
-unlist_rstudio_proj <- function(rm_proj, path = get_path_to_listed_rproj()) {
+unlist_rstudio_proj <- function(rm_proj, 
+                                path = get_path_to_listed_rproj(
+                                  user = c("LeporeM", "dora")
+                                )) {
   rproj <- readr::read_lines(path)
 
   keep <- rproj[!grepl(rm_proj, rproj)]

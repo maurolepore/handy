@@ -2,27 +2,30 @@
 % Please edit documentation in R/unlist_rstudio_proj.R
 \name{unlist_rstudio_proj}
 \alias{unlist_rstudio_proj}
-\title{Remove projects from RStudio's project list.}
+\title{Remove specific projects from RStudio's list under File > Recent Projects.}
 \usage{
-unlist_rstudio_proj(path_to_list = get_my_rstudio_proj_list(), rm_proj)
+unlist_rstudio_proj(rm_proj, path = get_path_to_listed_rproj(user =
+  c("LeporeM", "dora")))
 }
 \arguments{
-\item{path_to_list}{Path to the file where the projects are listed. In my
-computer, they are given by \code{\link[=get_my_rstudio_proj_list]{get_my_rstudio_proj_list()}}.}
+\item{rm_proj}{Pattern to match the project(s) to remove.}
 
-\item{rm_proj}{}
+\item{path}{Path to the file where RStudio stores the list of Recent
+Projects.}
 }
 \value{
-Invisible projects to keep. This function is called for its side
-effect: to overwite the list of RStudio projects to exclude the ones the
-user choosed to exclude.
+Invisibly returns the to Keep. The side effect is a list of Recent
+RStudio projects thas lacks the ones the user chosed to remove.
 }
 \description{
-Remove projects from RStudio's project list.
+This function is called for its side effect: to remove one or more RStudio's
+projects from the list of recent projects found in File > Recent Projects.
 }
 \examples{
 \dontrun{
-x <- unlist_rstudio_proj(get_my_rstudio_proj_list(), rm_proj = "todo|handy")
+# Remove "project1" and "project3".
+x <- unlist_rstudio_proj("project1|project3")
+# Show the projects to keep in File > Recent Projects
 x
 }
 }
