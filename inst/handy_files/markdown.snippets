@@ -1,0 +1,106 @@
+snippet rmd
+	---
+	title: "${1:Title}"
+	subtitle: "${2:Subtitle}"
+	author: "maurolepore@gmail.com"
+	date: "`r Sys.Date()`"
+	output:
+	  rmarkdown::${3:html}_document:
+	    toc: true
+	    toc_depth: 6
+	---
+
+	```{r setup, include=FALSE}
+	# > There is one chunk name that imbues special behaviour: setup. When you're in
+	# a notebook mode, the chunk named setup will be run automatically once, before
+	# any other code is run.
+	# --http://r4ds.had.co.nz/r-markdown.html#chunk-options
+
+
+
+	# Load packages (including data-packages) ----
+
+	library(ggplot2)
+	library(dplyr)
+
+
+
+	# Load un-packaged dependencies ----
+
+
+
+
+
+	# Figures ----
+
+	# > If you want to make sure the font size is consistent across all your
+	# figures, whenever you set out.width, you'll also need to adjust fig.width to
+	# maintain the same ratio with your default out.width. For example, if your
+	# default fig.width is 6 and out.width is 0.7, when you set out.width = "50%"
+	# you'll need to set fig.width to 4.3 (6 * 0.5 / 0.7).
+	# --http://r4ds.had.co.nz/
+
+	set.seed(1014)
+	options(digits = 3)
+
+	knitr::opts_chunk\$set(
+	  echo = TRUE,
+	  comment = "#>",
+	  collapse = TRUE,
+	  cache = TRUE,
+	  out.width = "70%",
+	  fig.align = "center",
+	  fig.width = 6,
+	  fig.asp = 0.618,  # 1 / phi
+	  fig.show = "hold",
+	  rows.print = 3  # {mine}
+	)
+
+	options(dplyr.print_min = 3, dplyr.print_max = 3, tidyverse.quiet = TRUE)
+
+	# customize ggplot
+
+	update_geom_defaults("point",
+	  list(shape = 21, colour = "black", size = 5, stroke = 1)
+	)
+	update_geom_defaults("text", list(size = 4.5))
+	```
+
+snippet vig
+	---
+	title: "${1:Vignette Title}"
+	subtitle: "${2:Subtitle}"
+	author: "Mauro Lepore"
+	date: "`r Sys.Date()`"
+	output:
+	  rmarkdown::html_vignette:
+	    toc: true
+	    toc_depth: 6
+	vignette: >
+	  %\VignetteIndexEntry{${1:Vignette Title}}
+	  %\VignetteEngine{knitr::rmarkdown}
+	  %\VignetteEncoding{UTF-8}
+	---
+
+	```{r setup, echo = FALSE, message=FALSE, warning=FALSE}
+	# hadley's settings
+	set.seed(1014)
+	options(digits = 3)
+
+	knitr::opts_chunk\$set(
+	  echo = TRUE,  # {mine}
+	  comment = "#>",
+	  collapse = TRUE,
+	  # cache = TRUE,
+	  out.width = "70%",
+	  fig.align = "center",
+	  fig.width = 6,
+	  fig.asp = 0.618,  # 1 / phi
+	  fig.show = "hold",
+	  rows.print = 3  # {mine}
+	)
+
+	options(dplyr.print_min = 3, dplyr.print_max = 3, tidyverse.quiet = TRUE)
+	```
+
+
