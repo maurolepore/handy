@@ -3,6 +3,13 @@
 git add .
 git commit -m ""
 
+# Push --------------------------------------------------------------------
+
+git pull
+git push
+
+
+
 # Cherry pick -------------------------------------------------------------
 
 # Choose a commit from one branch and apply it onto another
