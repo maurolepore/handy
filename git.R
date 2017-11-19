@@ -1,7 +1,16 @@
+# MOST COMMON COMMANDS ====================================================
+
 # Add all and commit ------------------------------------------------------
 
 git add .
-git commit -m "Add function to write a file git.R with common git commands"
+git commit -m ""
+
+# Push --------------------------------------------------------------------
+
+git pull
+git push
+
+# LESS COMMON COMMANDS ====================================================
 
 # Cherry pick -------------------------------------------------------------
 
