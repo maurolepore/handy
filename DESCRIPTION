@@ -4,18 +4,20 @@ Version: 0.0.0.9000
 Authors@R: person("Mauro", "Lepore", email = "maurolepore@gmail.com", 
     role = c("aut", "cre"))
 Description: Handy Tools for Common Problems.
-Depends: R (>= 3.3.3)
 License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
-RoxygenNote: 6.0.1
-Roxygen: list(markdown = TRUE)
 URL: https://github.com/maurolepore/handy
 BugReports: https://github.com/maurolepore/handy
-Suggests: testthat,
-    purrr,
-    DependenciesGraphs,
-    utils
+Depends: 
+    R (>= 3.3.3)
 Imports: 
     purrr,
-    readr
+    readr,
+    utils,
+    DependenciesGraphs
+Suggests: 
+    testthat
+Encoding: UTF-8
+LazyData: true
+Remotes: datastorm-open/DependenciesGraphs
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.0.1

@@ -1,8 +1,7 @@
-snippet git.R
 # Add all and commit ------------------------------------------------------
 
 git add .
-git commit -m ""
+git commit -m "Add function to write a file git.R with common git commands"
 
 # Cherry pick -------------------------------------------------------------
 

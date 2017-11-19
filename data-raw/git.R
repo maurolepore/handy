@@ -1,4 +1,3 @@
-snippet git.R
 # Add all and commit ------------------------------------------------------
 
 git add .
