@@ -11,7 +11,6 @@ edit_rstudio_recent_projects <- function() {
 #' @name open
 NULL
 
-
 #' @rdname open
 #' @export
 open_snippets <- function() {
