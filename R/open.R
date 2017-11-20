@@ -64,4 +64,4 @@ open_tests <- open_factory("tests")
 
 #' @rdname open
 #' @export
-open_testthat <- open_factory("testthat")
+open_testthat <- open_factory("tests/testthat")
