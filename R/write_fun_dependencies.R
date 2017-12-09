@@ -10,11 +10,13 @@
 #' @export
 #'
 #' @examples
-#' library(ctfs)
-#' pkg <- "package:ctfs"
-#' fun <- "growth"
-#' file_nm <- "./dependencies_of_ctfs-growth.R"
+#' \dontrun{
+#' library(base)
+#' pkg <- "package:base"
+#' fun <- "sum"
+#' file_nm <- "./dependencies_of_base-sum.R"
 #' write_fun_dependencies(pkg, fun, file_nm)
+#' }
 write_fun_dependencies <- function(pkg, fun, file_nm) {
   dep <- DependenciesGraphs::funDependencies(pkg, fun)
   nms <- as.character(dep[["Nomfun"]][["label"]])

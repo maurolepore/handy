@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Collapse string with commas — commas â€¢ handy</title>
+<title>Write a file with all dependencies of a user-defined function. — write_fun_dependencies â€¢ handy</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -83,31 +83,47 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Collapse string with commas</h1>
+    <h1>Write a file with all dependencies of a user-defined function.</h1>
     </div>
 
     
-    <p>Collapse string with commas</p>
+    <p>Write a file with all dependencies of a user-defined function.</p>
     
 
-    <pre class="usage"><span class='fu'>commas</span>(<span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>write_fun_dependencies</span>(<span class='no'>pkg</span>, <span class='no'>fun</span>, <span class='no'>file_nm</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>...</th>
-      <td><p>Chr</p></td>
+      <th>pkg</th>
+      <td><p>String giving the package where <code>fun</code> lives, with the format
+"package:PACKAGE", where lowercase is literal and caps is variable.</p></td>
+    </tr>
+    <tr>
+      <th>fun</th>
+      <td><p>String giving the function which dependencies you want to write
+to a file.</p></td>
+    </tr>
+    <tr>
+      <th>file_nm</th>
+      <td><p>String giving the path to a file where to write the output.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>String</p>
+    <p>A file with the functions on which <code>fun</code> depends.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>commas</span>(<span class='no'>letters</span>[<span class='fl'>1</span>:<span class='fl'>10</span>])</div><div class='output co'>#&gt; [1] "a, b, c, d, e, f, g, h, i, j"</div></pre>
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='fu'><a href='http://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>base</span>)
+<span class='no'>pkg</span> <span class='kw'>&lt;-</span> <span class='st'>"package:base"</span>
+<span class='no'>fun</span> <span class='kw'>&lt;-</span> <span class='st'>"sum"</span>
+<span class='no'>file_nm</span> <span class='kw'>&lt;-</span> <span class='st'>"./dependencies_of_base-sum.R"</span>
+<span class='fu'>write_fun_dependencies</span>(<span class='no'>pkg</span>, <span class='no'>fun</span>, <span class='no'>file_nm</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

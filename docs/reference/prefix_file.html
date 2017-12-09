@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Collapse string with commas — commas â€¢ handy</title>
+<title>Add a prefix to a file name. — prefix_file â€¢ handy</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -83,31 +83,46 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Collapse string with commas</h1>
+    <h1>Add a prefix to a file name.</h1>
     </div>
 
     
-    <p>Collapse string with commas</p>
+    <p>Add a prefix to a file name.</p>
     
 
-    <pre class="usage"><span class='fu'>commas</span>(<span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>prefix_file</span>(<span class='no'>from</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>prefix</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>...</th>
-      <td><p>Chr</p></td>
+      <th>from</th>
+      <td><p>Path where the files live.</p></td>
+    </tr>
+    <tr>
+      <th>to</th>
+      <td><p>Optional. Path where the files will be copied to. If NULL (default)
+files will be renamed in the directory <code>from</code>.</p></td>
+    </tr>
+    <tr>
+      <th>prefix</th>
+      <td><p>A string. Prefix to add to the file names.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>String</p>
+    <p>The files with a prefix added to their names.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>commas</span>(<span class='no'>letters</span>[<span class='fl'>1</span>:<span class='fl'>10</span>])</div><div class='output co'>#&gt; [1] "a, b, c, d, e, f, g, h, i, j"</div></pre>
+    <pre class="examples"><div class='input'>
+<span class='fu'>prefix_file</span>(<span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"./file-from/"</span>, <span class='kw'>prefix</span> <span class='kw'>=</span> <span class='st'>"my_prefix"</span>)
+<span class='fu'>prefix_file</span>(
+  <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"./file-from/"</span>,
+  <span class='kw'>to</span> <span class='kw'>=</span> <span class='st'>"./file-to"</span>,
+  <span class='kw'>prefix</span> <span class='kw'>=</span> <span class='st'>"my_prefix"</span>
+)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

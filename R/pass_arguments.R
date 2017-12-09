@@ -1,4 +1,5 @@
-
+#' @importFrom magrittr %>%
+NULL
 
 #' Reformat arguments for funcitons, from arg1, arg2 to arg1 = arg1, arg2 = arg2
 #' 
@@ -11,7 +12,9 @@
 #' @export
 #'
 #' @examples
-#' pass_arguments(c("one, two"))
+#' \dontrun{
+#' # pass_arguments(c("one, two"))
+#' }
 pass_arguments <- function(string) {
   x <- stringr::str_split(string, ",")[[1]] %>% 
     tibble::tibble()

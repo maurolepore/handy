@@ -18,8 +18,8 @@ A plot
 Explore dependencies between functions in a package.
 }
 \examples{
-library(ctfs)
-explore_dependencies("ctfs", "abundanceperquad")
+library(base)
+explore_dependencies("base", "sum")
 }
 \seealso{
 \code{\link[DependenciesGraphs:funDependencies]{DependenciesGraphs::funDependencies()}}.

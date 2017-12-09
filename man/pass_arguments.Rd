@@ -17,5 +17,7 @@ This is useful when you extract a funciton and the arguments in the signature
 need to be converted to arguments in a call to the function.
 }
 \examples{
-pass_arguments(c("one, two"))
+\dontrun{
+# pass_arguments(c("one, two"))
+}
 }

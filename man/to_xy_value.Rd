@@ -19,19 +19,23 @@ Gather columns and rows of a matrix to variables \code{x} and \code{y} of a tibb
 with values passed to variable \code{value}.
 }
 \examples{
-library(tidyverse)
-library(bciex)
-
-# Class is different
-class(bci_mat)
-class(bci_elevation)
-
-# But contents are the same.
-# Tidy mat: each variable in a column; each observation in a row
-mat <- to_xy_value(bci_mat, grid = c(y = 5, x = 5))
-mat <- rename(mat, elev = value)
-# Arrange in the same way
-mat <- mat \%>\% arrange(x, y, elev)
-elev <- bci_elevation \%>\% arrange(x, y, elev)
-identical(mat, elev)
+\dontrun{
+# Show that bci_elevation and bci_matrix contain the same information. They
+# justdiffer in the class.
+# library(tidyverse)
+# library(bciex)
+# 
+# # Class is different
+# class(bci_mat)
+# class(bci_elevation)
+# 
+# # But contents are the same.
+# # Tidy mat: each variable in a column; each observation in a row
+# mat <- to_xy_value(bci_mat, grid = c(y = 5, x = 5))
+# mat <- rename(mat, elev = value)
+# # Arrange in the same way
+# mat <- mat \%>\% arrange(x, y, elev)
+# elev <- bci_elevation \%>\% arrange(x, y, elev)
+# identical(mat, elev)
+}
 }

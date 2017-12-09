@@ -37,6 +37,9 @@ open_tests()
 
 open_testthat()
 }
+\arguments{
+\item{dir}{Directory}
+}
 \description{
 Open files and directories of a project and package.
 }

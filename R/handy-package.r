@@ -1,7 +1,11 @@
-#' Handy Tools
-#'
-#' Handy tools.
-#'
-#' @name handy
-#' @docType package
-NULL
+#' @keywords internal
+"_PACKAGE"
+
+#' @importFrom rlang .data
+#' @importFrom stats setNames
+#' @importFrom graphics plot
+#' @import DependenciesGraphs
+
+utils::globalVariables(
+  c("left", "right", "x", "y", "value", ".data")
+)

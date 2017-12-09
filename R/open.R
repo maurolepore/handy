@@ -9,6 +9,7 @@ edit_rstudio_recent_projects <- function() {
 
 #' Open files and directories of a project and package.
 #' @name open
+#' @param dir Directory
 NULL
 
 #' @rdname open

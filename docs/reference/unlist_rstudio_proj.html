@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Collapse string with commas — commas â€¢ handy</title>
+<title>Remove specific projects from RStudio's list under File &gt; Recent Projects. — unlist_rstudio_proj â€¢ handy</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -83,31 +83,44 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Collapse string with commas</h1>
+    <h1>Remove specific projects from RStudio's list under File &gt; Recent Projects.</h1>
     </div>
 
     
-    <p>Collapse string with commas</p>
+    <p>This function is called for its side effect: to remove one or more RStudio's
+projects from the list of recent projects found in File &gt; Recent Projects.</p>
     
 
-    <pre class="usage"><span class='fu'>commas</span>(<span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>unlist_rstudio_proj</span>(<span class='no'>rm_proj</span>, <span class='kw'>path</span> <span class='kw'>=</span> <span class='fu'><a href='get_path_to_listed_rproj.html'>get_path_to_listed_rproj</a></span>(<span class='kw'>user</span> <span class='kw'>=</span>
+  <span class='fu'>c</span>(<span class='st'>"LeporeM"</span>, <span class='st'>"dora"</span>)))</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>...</th>
-      <td><p>Chr</p></td>
+      <th>rm_proj</th>
+      <td><p>Pattern to match the project(s) to remove.</p></td>
+    </tr>
+    <tr>
+      <th>path</th>
+      <td><p>Path to the file where RStudio stores the list of Recent
+Projects.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>String</p>
+    <p>Invisibly returns the to Keep. The side effect is a list of Recent
+RStudio projects thas lacks the ones the user chosed to remove.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>commas</span>(<span class='no'>letters</span>[<span class='fl'>1</span>:<span class='fl'>10</span>])</div><div class='output co'>#&gt; [1] "a, b, c, d, e, f, g, h, i, j"</div></pre>
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='co'># Remove "project1" and "project3".</span>
+<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'>unlist_rstudio_proj</span>(<span class='st'>"project1|project3"</span>)
+<span class='co'># Show the projects to keep in File &gt; Recent Projects</span>
+<span class='no'>x</span>
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

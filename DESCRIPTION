@@ -10,10 +10,18 @@ BugReports: https://github.com/maurolepore/handy
 Depends: 
     R (>= 3.3.3)
 Imports: 
+    DependenciesGraphs,
+    dplyr,
+    magrittr,
     purrr,
     readr,
-    utils,
-    DependenciesGraphs
+    rlang,
+    rstudioapi,
+    stringr,
+    tibble,
+    tidyr,
+    usethis,
+    utils
 Suggests: 
     testthat
 Encoding: UTF-8

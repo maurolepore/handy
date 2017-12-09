@@ -1,7 +1,3 @@
-# devtools::install_github("DataKnowledge/DependenciesGraphs")
-library(DependenciesGraphs)
-library(ctfs)
-
 #' Explore dependencies between functions in a package.
 #'
 #' @param pkg Character string giving the name of a package.
@@ -12,8 +8,8 @@ library(ctfs)
 #' @export
 #'
 #' @examples
-#' library(ctfs)
-#' explore_dependencies("ctfs", "abundanceperquad")
+#' library(base)
+#' explore_dependencies("base", "sum")
 explore_dependencies <- function(pkg, .f) {
   if (require("DependenciesGraphs")) {
     if (!isNamespaceLoaded(pkg)) {
