@@ -23,8 +23,7 @@ Imports:
     usethis,
     utils
 Suggests: 
-    testthat,
-    DependenciesGraphs
+    testthat
 Encoding: UTF-8
 LazyData: true
 Remotes: datastorm-open/DependenciesGraphs
