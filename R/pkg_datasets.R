@@ -21,6 +21,5 @@ is_attached <- function(pkg) {
 
 #' @export
 pkg_get <- function(x, pkg) {
-  attach("fgeo")
   get(x, asNamespace(pkg))
 }
